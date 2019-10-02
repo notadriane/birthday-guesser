@@ -13,29 +13,32 @@ using namespace std;
 
 int main()
 {
-	int set1, set2, set3{}, set4{}, set5{}, birthday;
-	char ans1, ans2, ans3, ans4, ans5;
+	// Variables
+	
+	int set1, set2, set3{}, set4{}, set5{}, birthday; // variables used for calculations
+	char ans1, ans2, ans3, ans4, ans5; // stores user answers
 
 	cout << "----------" << endl
-	 	 << " Welcome! " << endl
-		 << "----------" << endl;
+	     << " Welcome! " << endl
+	     << "----------" << endl;
 
-	cout << "This program will determine the day of the month you were born.\nYou will be shown five sets of numbers.\n\nAnswer Y/y for yes or N/n for no if your birthday appears in that set." << endl << endl;
+	cout << "This program will determine the day of the month you were born.\nYou will be shown five sets of numbers."
+	     <<"\n\nAnswer Y/y for yes or N/n for no if your birthday appears in that set." << endl << endl;
 
-	//set1
+	// set1
 
-	cout << "Is your birthday in Set 1?" << endl << right
+	cout << "Is your birthday in Set 1?" << endl << right  
 		<< setw(4) << "1" << setw(4) << "3" << setw(4) << "5" << setw(5) << "7\n"
 		<< setw(4) << "9" << setw(4) << "11" << setw(4) << "13" << setw(5) << "15\n"
 		<< setw(4) << "17" << setw(4) << "19" << setw(4) << "21" << setw(5) << "23\n"
 		<< setw(4) << "25" << setw(4) << "27" << setw(4) << "29" << setw(5) << "31\n";
 
-	cin >> ans1;
+	cin >> ans1; //stores user input
 
-	switch (ans1)
+	switch (ans1)  // switch case used to change value of set1 depending on the answer
 	{
 	case 'Y':
-		set1 = 1;
+		set1 = 1; // if user enters yes, set1 equals first number of the set
 		break;
 	case 'y':
 		set1 = 1;
@@ -46,11 +49,11 @@ int main()
 	case 'n':
 		set1 = 0;
 		break;
-	default: cout << "You did not enter a valid answer.\n";
+	default: cout << "You did not enter a valid answer.\n"; // displays message if user enters value other than Y/y or N/n
 	}
 	cout << endl;
 
-	//set2
+	// set2
 
 	cout << "Is your birthday in Set 2?" << endl
 		<< setw(4) << "2" << setw(4) << "3" << setw(4) << "6" << setw(5) << " 7\n"
@@ -78,7 +81,7 @@ int main()
 	}
 	cout << endl;
 
-	//set 3
+	// set 3
 
 	cout << "Is your birthday in Set 3?" << endl
 		<< setw(4) << "4" << setw(4) << "5" << setw(4) << "6" << setw(5) << "7\n"
@@ -106,7 +109,7 @@ int main()
 	}
 	cout << endl;
 
-	//set 4
+	// set 4
 
 	cout << "Is your birthday in Set 4?" << endl
 		<< setw(4) << "8" << setw(4) << "9" << setw(4) << "10" << setw(5) << "11\n"
@@ -168,7 +171,7 @@ int main()
 
 	//display results
 
-	cout << "The day of your birthday is " << birthday << endl;
+	cout << "The day of your birthday is " << birthday << "." << endl;
 
 	return 0;
 }
